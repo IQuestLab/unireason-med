@@ -1,0 +1,17 @@
+{
+  "unireason_med_sft": {
+    "file_name": "unireason_med_sft/train.parquet",
+    "formatting": "openai",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  }
+}
