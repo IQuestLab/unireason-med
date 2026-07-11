@@ -53,6 +53,7 @@ while the red boxes correspond to the xy projection of 3D GCoT cuboids within th
 ```text
 code/sft/   LLaMA-Factory-based SFT code and configs
 code/rl/    verl-based GRPO/RL code and configs
+code/inference/  standalone 2D/3D Hugging Face inference
 data/       Data documentation
 assets/     Figures used in this README
 ```
@@ -95,4 +96,27 @@ Primary RL entrypoint and config:
 code/rl/examples/grpo_trainer/run_unireason_med_grpo.sh
 code/rl/examples/urm_multiturn/config/unireason_med_2d3dmix_grpo_vllm.yaml
 code/rl/examples/reward_function/unireason_med_mcq_reward.py
+```
+
+
+## Inference
+
+Standalone Hugging Face inference code for both 2D images and 3D volumes is provided in:
+
+```text
+code/inference/unireason_med_infer.py
+```
+
+It supports the same grounded reasoning interface used during training: 2D region crops from `<|box_start|>[x1,y1,x2,y2]<|box_end|>` and 3D cuboid crops from `<|box_start|>[x1,y1,z1,x2,y2,z2]<|box_end|>`. See `code/inference/README.md` for single-sample and batch examples.
+
+
+## Citation
+
+```bibtex
+@article{chen2026unireason,
+  title={UniReason-Med: A Shared Grounded Reasoning Interface for 2D-to-3D Transfer in Medical VQA},
+  author={Chen, Mengzhuo and Shu, Yan and Liu, Chi and Piao, Hongming and Wang, Xidong and Li, Derek and Dai, Bryan},
+  journal={arXiv preprint arXiv:2606.11740},
+  year={2026}
+}
 ```
